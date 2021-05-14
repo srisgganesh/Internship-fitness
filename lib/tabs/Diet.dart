@@ -58,7 +58,7 @@ class Diet extends StatelessWidget {
                   Container(
                     height: 30.0,
                     child: Tab(
-                      text: 'Snacks',
+                      text: 'Tiffin',
                     ),
                   ),
                 ],
