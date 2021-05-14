@@ -34,7 +34,7 @@ class Settings extends StatelessWidget{
               ),
               ListTile(
                 title:  Text(
-                  'Contact Us',
+                  'SEE UUU',
                   style: TextStyle(
                     fontSize: 25,
                     color: Colors.black54,
