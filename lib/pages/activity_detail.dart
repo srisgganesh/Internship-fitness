@@ -1,7 +1,9 @@
 import 'package:fitness_flutter/components/next_step.dart';
 import 'package:fitness_flutter/models/exercise.dart';
-import 'package:fitness_flutter/pages/activity_timer.dart';
+//import 'package:fitness_flutter/pages/activity_timer.dart';
 import 'package:flutter/material.dart';
+
+import 'trainerlist.dart';
 
 class ActivityDetail extends StatelessWidget {
   final String tag;
@@ -59,7 +61,7 @@ class ActivityDetail extends StatelessWidget {
             Stack(
               children: <Widget>[
                 Container(
-                  padding: EdgeInsets.fromLTRB(20.0, 30.0, 20.0, 20.0),
+                  padding: EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 20.0),
                   width: width,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -72,84 +74,68 @@ class ActivityDetail extends StatelessWidget {
                         ),
                       ),
                       Container(
-                        padding: EdgeInsets.all(20.0),
-                        margin: EdgeInsets.only(top: 20.0, bottom: 20.0),
-                        height: 90.0,
-                        decoration: BoxDecoration(
-                          color: Color.fromRGBO(231, 241, 255, 1.0),
-                          borderRadius: BorderRadius.circular(15.0),
-                        ),
-                        child: Row(
-                          children: <Widget>[
-                            Container(
-                              margin: EdgeInsets.only(right: 55.0),
-                              child: Column(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: <Widget>[
-                                  Text(
-                                    'Time',
-                                    style: TextStyle(
-                                        fontSize: 14.0,
-                                        color: Colors.blueGrey[300]),
-                                  ),
-                                  Text(
-                                    '${this.exercise.time}',
-                                    style: TextStyle(
-                                        fontSize: 18.0,
-                                        color: Colors.lightBlue,
-                                        fontWeight: FontWeight.w900),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            Container(
-                              margin: EdgeInsets.only(right: 45.0),
-                              child: Column(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: <Widget>[
-                                  Text(
-                                    'Intensity',
-                                    style: TextStyle(
-                                      fontSize: 14.0,
-                                      color: Colors.blueGrey[300],
-                                    ),
-                                  ),
-                                  Text(
-                                    this.exercise.difficult,
-                                    style: TextStyle(
-                                      fontSize: 18.0,
-                                      color: Colors.lightBlue,
-                                      fontWeight: FontWeight.w900,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Container(
                         margin: EdgeInsets.only(top: 15.0),
                         child: Column(
                           children: <Widget>[
+                            GestureDetector(
+                              child: NextStep(
+                                image: 'assets/images/Strength.jpg',
+                                title: 'Strength and Conditioning',
+                                //seconds: 50,
+                              ),
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (_) {
+                                    return TrainerList();
+                                  }),
+                                );
+                              },
+                            ),
+                            NextStep(
+                              image: 'assets/images/Muscle.png',
+                              title: 'Muscle Building',
+                              //seconds: 50,
+                            ),
+                            NextStep(
+                              image: 'assets/images/rehab.jpg',
+                              title: 'Rehab',
+                              //seconds: 50,
+                            ),
+                            NextStep(
+                              image: 'assets/images/endurance.jpg',
+                              title: 'Endurance',
+                              //seconds: 50,
+                            ),
+                            NextStep(
+                              image: 'assets/images/agility.jpg',
+                              title: 'Agility',
+                              //seconds: 50,
+                            ),
+                            NextStep(
+                              image: 'assets/images/speed.jpg',
+                              title: 'Speed',
+                              //seconds: 50,
+                            ),
+                            NextStep(
+                              image: 'assets/images/Pilates.jpg',
+                              title: 'Pilates',
+                              //seconds: 50,
+                            ),
                             NextStep(
                               image: 'assets/images/image005.jpg',
-                              title: 'Plank',
-                              seconds: 50,
+                              title: 'Yoga',
+                              //seconds: 50,
                             ),
                             NextStep(
-                              image: 'assets/images/image006.jpg',
-                              title: 'Push-ups',
-                              seconds: 50,
+                              image: 'assets/images/acro-yoga.jpg',
+                              title: 'Acro Yoga',
+                              //seconds: 50,
                             ),
                             NextStep(
-                              image: 'assets/images/image007.jpg',
-                              title: 'Lateral Raise',
-                              seconds: 50,
+                              image: 'assets/images/aerial-yoga.jpg',
+                              title: 'Aerial Yoga',
+                              //seconds: 50,
                             ),
                           ],
                         ),
@@ -162,39 +148,39 @@ class ActivityDetail extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: GestureDetector(
-        child: Container(
-          margin: EdgeInsets.only(left: 20.0, right: 20.0, bottom: 20.0),
-          padding: EdgeInsets.all(15.0),
-          decoration: BoxDecoration(
-              color: Color.fromRGBO(100, 140, 255, 1.0),
-              borderRadius: BorderRadius.circular(15.0),
-              boxShadow: [
-                BoxShadow(
-                  color: Color.fromRGBO(100, 140, 255, 0.5),
-                  blurRadius: 10.0,
-                  offset: Offset(0.0, 5.0),
-                ),
-              ]),
-          child: Text(
-            'Start',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontSize: 22.0,
-              fontWeight: FontWeight.w900,
-              color: Colors.white,
-            ),
-          ),
-        ),
-        onTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (_) {
-              return ActivityTimer();
-            }),
-          );
-        },
-      ),
+      // bottomNavigationBar: GestureDetector(
+      //   child: Container(
+      //     margin: EdgeInsets.only(left: 20.0, right: 20.0, bottom: 20.0),
+      //     padding: EdgeInsets.all(15.0),
+      //     decoration: BoxDecoration(
+      //         color: Color.fromRGBO(100, 140, 255, 1.0),
+      //         borderRadius: BorderRadius.circular(15.0),
+      //         boxShadow: [
+      //           BoxShadow(
+      //             color: Color.fromRGBO(100, 140, 255, 0.5),
+      //             blurRadius: 10.0,
+      //             offset: Offset(0.0, 5.0),
+      //           ),
+      //         ]),
+      //     child: Text(
+      //       'Start',
+      //       textAlign: TextAlign.center,
+      //       style: TextStyle(
+      //         fontSize: 22.0,
+      //         fontWeight: FontWeight.w900,
+      //         color: Colors.white,
+      //       ),
+      //     ),
+      //   ),
+      //   onTap: () {
+      //     Navigator.push(
+      //       context,
+      //       MaterialPageRoute(builder: (_) {
+      //         return ActivityTimer();
+      //       }),
+      //     );
+      //   },
+      // ),
     );
   }
 }
