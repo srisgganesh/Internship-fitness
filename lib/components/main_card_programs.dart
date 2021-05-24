@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fitness_flutter/pages/free_trial.dart';
 
 class MainCardPrograms extends StatelessWidget {
   final Map<String, String> cardInfo = {
@@ -26,18 +27,18 @@ class MainCardPrograms extends StatelessWidget {
                   fontWeight: FontWeight.w700,
                 ),
               ),
-              Text(
+              /*Text(
                 this.cardInfo['time'],
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 12.0,
                 ),
-              )
+              )*/
             ],
           ),
           padding: EdgeInsets.all(20.0),
           decoration: BoxDecoration(
-            color: Colors.grey[400].withOpacity(0.95),
+            color: Colors.grey[400].withOpacity(0.50),
             borderRadius: BorderRadius.only(
               bottomLeft: Radius.circular(20.0),
               bottomRight: Radius.circular(20.0),
@@ -45,13 +46,9 @@ class MainCardPrograms extends StatelessWidget {
           ),
         ),
       ),
-      width: size.width - 40,
-      height: (size.width - 40) / 2,
-      margin: EdgeInsets.only(
-        top: 40.0,
-        left: 20.0,
-        right: 20.0,
-      ),
+      width: size.width - 10,
+      height: (size.width - 10) / 2,
+      margin: EdgeInsets.only(top: 20.0,left: 20,right: 20),
       decoration: BoxDecoration(
         image: DecorationImage(
           image: AssetImage(this.cardInfo['image']),
@@ -70,5 +67,6 @@ class MainCardPrograms extends StatelessWidget {
         ],
       ),
     );
+
   }
 }

@@ -1,6 +1,5 @@
 import 'package:fitness_flutter/tabs/tabs.dart';
 import 'package:flutter/material.dart';
-
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// ignore: camel_case_types
 class fitness_challenge extends StatelessWidget {
 
   final Map<String, String> element = {
