@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+//import 'package:fitness_flutter/pages/activity_timer.dart';
 
 class NextStep extends StatelessWidget {
   final String image, title;
-  final int seconds;
+  //final int seconds;
 
   NextStep({
     @required this.image,
     @required this.title,
-    @required this.seconds,
+    //@required this.seconds,
   });
 
   @override
@@ -32,26 +33,34 @@ class NextStep extends StatelessWidget {
           ),
         ),
         Container(
-          height: 65.0,
+          height: 60.0,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Text(
                 this.title,
                 style: TextStyle(
-                  fontSize: 16.0,
+                  fontSize: 17.0,
                   color: Colors.black87,
                 ),
               ),
-              Text(
-                '${this.seconds} sec',
-                style: TextStyle(
-                  fontSize: 14.0,
-                  color: Colors.blueGrey[200],
-                ),
-              )
+              // Text(
+              //   '${this.seconds} sec',
+              //   style: TextStyle(
+              //     fontSize: 14.0,
+              //     color: Colors.blueGrey[200],
+              //   ),
+              //)
             ],
           ),
+          //   onTap: () {
+          //   Navigator.push(
+          //     context,
+          //     MaterialPageRoute(builder: (_) {
+          //       return ActivityTimer();
+          //     }),
+          //   );
+          // },
         ),
       ],
     );
