@@ -9,4 +9,6 @@ class Exercise {
     @required this.difficult,
     @required this.image,
   });
+
+  get duration => null;
 }

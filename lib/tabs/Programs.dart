@@ -6,6 +6,7 @@ import 'package:fitness_flutter/components/image_card_with_internal.dart';
 import 'package:fitness_flutter/components/main_card_programs.dart';
 import 'package:fitness_flutter/components/user_photo.dart';
 import 'package:fitness_flutter/components/user_tip.dart';
+import 'package:fitness_flutter/components/offline_videos.dart';
 import 'package:fitness_flutter/models/exercise.dart';
 import 'package:fitness_flutter/pages/activity_detail.dart';
 
@@ -84,8 +85,10 @@ class Programs extends StatelessWidget {
                  // title: 'Fat burning',
                   horizontalList: this.generateList(context),
                 ),
-                Section(
-                  //title: 'Offline Videos',
+                OfflineVideos(),
+              /*  Section(
+                   horizontalList: this.generateList(context),
+                  title: 'Offline Videos',
                   horizontalList: <Widget>[
                     ImageCardWithInternal(
                       image: 'assets/images/image004.jpg',
@@ -93,7 +96,7 @@ class Programs extends StatelessWidget {
                       duration: '7 min',
                     ),
                   ],
-                ),
+                ), */
                 Container(
                   margin: EdgeInsets.only(top: 50.0),
                   padding: EdgeInsets.only(top: 10.0, bottom: 40.0),
