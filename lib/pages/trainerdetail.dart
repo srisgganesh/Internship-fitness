@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 //import 'package:flutter_universe/data.dart';
 import 'trainercolor.dart';
+import 'trainerdata.dart';
 
 class DetailPage extends StatelessWidget {
   final TrainerInfo trainerInfo;
@@ -102,14 +103,14 @@ class DetailPage extends StatelessWidget {
             Positioned(
               right: -64,
               child: Hero(
-                  tag: trainerInfo.position,
+                  tag: 1,
                   child: Image.asset(trainerInfo.iconImage)),
             ),
             Positioned(
               top: 60,
               left: 32,
               child: Text(
-                trainerInfo.position.toString(),
+                "",
                 style: TextStyle(
                   fontFamily: 'Avenir',
                   fontSize: 247,
