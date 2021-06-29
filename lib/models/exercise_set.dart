@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'exercise.dart';
+//import 'exercise.dart';
 
 enum ExerciseType { low, mid, hard }
 

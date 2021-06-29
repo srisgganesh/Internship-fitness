@@ -1,6 +1,5 @@
 import 'package:fitness_flutter/models/exercise_set.dart';
 import 'package:flutter/material.dart';
-
 import 'exercisefroffline.dart';
 
 final exerciseSets = [
@@ -67,13 +66,13 @@ final exerciseSets = [
     exerciseType: ExerciseType.mid,
     color: Colors.purple.shade100.withOpacity(0.6),
   ),
-  ExerciseSet(
+  /*ExerciseSet(
     name: 'Abs',
     exercises: exercises1,
     imageUrl: 'assets/crunch.png',
     exerciseType: ExerciseType.mid,
     color: Colors.blue.shade100.withOpacity(0.6),
-  ),
+  ),*/
   ExerciseSet(
     name: 'Shoulder',
     exercises: exercises2,

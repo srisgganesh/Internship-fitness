@@ -63,27 +63,35 @@ class Results extends StatelessWidget {
                         color: Colors.grey,
                       ),
                     ),
-                    Container(
-                      margin: EdgeInsets.only(bottom: 40.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: <Widget>[
-                          CircleBadge(
-                            color: Color.fromRGBO(190, 130, 255, 1.0),
-                            title: '1st',
-                            subtitle: 'Workout',
-                          ),
-                          CircleBadge(
-                            color: Color.fromRGBO(75, 142, 255, 1.0),
-                            title: '1000',
-                            subtitle: 'kCal',
-                          ),
-                          CircleBadge(
-                            color: Color.fromRGBO(255, 255, 255, 1.0),
-                            title: '6000',
-                            subtitle: 'kCal',
-                          ),
-                        ],
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                        child: Container(
+                        margin: EdgeInsets.only(bottom: 40.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            CircleBadge(
+                              color: Color.fromRGBO(190, 130, 255, 1.0),
+                              title: '1st',
+                              subtitle: 'Workout',
+                            ),
+                            CircleBadge(
+                              color: Color.fromRGBO(75, 142, 255, 1.0),
+                              title: '1000',
+                              subtitle: 'kCal',
+                            ),
+                            CircleBadge(
+                              color: Color.fromRGBO(255, 255, 255, 1.0),
+                              title: '6000',
+                              subtitle: 'kCal',
+                            ),
+                            CircleBadge(
+                              color: Color.fromRGBO(190, 130, 255, 1.0),
+                              title: '25th',
+                              subtitle: 'Workout',
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     Text(
@@ -98,7 +106,7 @@ class Results extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
                           Text(
-                            '480 kCal',
+                            '2860 kCal',
                             style: TextStyle(
                               fontSize: 18.0,
                               fontWeight: FontWeight.w900,
@@ -128,7 +136,7 @@ class Results extends StatelessWidget {
                           bottom: 16.0,
                         ),
                         borderRadius: BorderRadius.circular(24),
-                        percent: 28.0,
+                        percent: 47.6,
                       ),
                     ),
                   ],
@@ -183,8 +191,8 @@ class Results extends StatelessWidget {
                           Container(
                             width: width * 0.60 - 5.0,
                             height: 100.0,
-                            margin: EdgeInsets.only(right: 15.0),
-                            padding: EdgeInsets.all(25.0),
+                            margin: EdgeInsets.only(right: 5.0),
+                            padding: EdgeInsets.all(20.0),
                             decoration: BoxDecoration(
                               color: Color.fromRGBO(231, 241, 255, 1.0),
                               borderRadius: BorderRadius.circular(15.0),
@@ -245,7 +253,7 @@ class Results extends StatelessWidget {
                           Container(
                             width: width * 0.30 - 10.0,
                             height: 100.0,
-                            padding: EdgeInsets.all(25.0),
+                            padding: EdgeInsets.all(10.0),
                             decoration: BoxDecoration(
                               color: Color.fromRGBO(241, 227, 255, 1.0),
                               borderRadius: BorderRadius.circular(15.0),

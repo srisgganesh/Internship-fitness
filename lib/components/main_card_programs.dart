@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fitness_flutter/pages/free_trial.dart';
+//import 'package:fitness_flutter/pages/free_trial.dart';
 
 class MainCardPrograms extends StatelessWidget {
   final Map<String, String> cardInfo = {

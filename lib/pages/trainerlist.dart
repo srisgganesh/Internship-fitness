@@ -1,3 +1,4 @@
+import 'package:fitness_flutter/pages/abouttrainer.dart';
 import 'package:fitness_flutter/pages/trainerdetail.dart';
 import 'package:flutter/material.dart';
 //import 'package:flutter_universe/detail_page.dart';
@@ -15,6 +16,14 @@ class _TrainerListState extends State<TrainerList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+       appBar: AppBar(
+        backgroundColor: Colors.white,
+        iconTheme: IconThemeData(color: Colors.black87),
+        title: Text(
+          "Trainer List",
+          style: TextStyle(color: Colors.black,fontSize: 22),        
+        ),
+      ),
       backgroundColor: gradientEndColor,
       body: Container(
         decoration: BoxDecoration(
@@ -31,7 +40,7 @@ class _TrainerListState extends State<TrainerList> {
                 padding: const EdgeInsets.all(32.0),
                 child: Column(
                   children: <Widget>[
-                    Padding(
+                    /*Padding(
                       padding: const EdgeInsets.fromLTRB(0, 0, 40, 0),
                       child: Text(
                         'Trainers List',
@@ -43,7 +52,7 @@ class _TrainerListState extends State<TrainerList> {
                         ),
                         textAlign: TextAlign.left,
                       ),
-                    ),
+                    ),*/
                     DropdownButton(
                       items: [
                         DropdownMenuItem(
@@ -133,15 +142,21 @@ class _TrainerListState extends State<TrainerList> {
                                       SizedBox(height: 32),
                                       Row(
                                         children: <Widget>[
-                                          Text(
-                                            'Book now',
-                                            style: TextStyle(
-                                              fontFamily: 'Avenir',
-                                              fontSize: 18,
-                                              color: secondaryTextColor,
-                                              fontWeight: FontWeight.w500,
+                                          GestureDetector(
+                                            child: Text(
+                                              'Book now',
+                                              style: TextStyle(
+                                                fontFamily: 'Avenir',
+                                                fontSize: 18,
+                                                color: secondaryTextColor,
+                                                fontWeight: FontWeight.w500,
+                                              ),
+                                              textAlign: TextAlign.left,
                                             ),
-                                            textAlign: TextAlign.left,
+                                            onTap: (){
+                                               Navigator.push(context,
+                                               MaterialPageRoute(builder: (context) => AboutTrainer()));
+                                            } ,
                                           ),
                                           Icon(
                                             Icons.arrow_forward,
