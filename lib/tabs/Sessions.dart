@@ -17,8 +17,19 @@ class Sessions extends StatelessWidget{
                 color: Colors.white,
                 padding: EdgeInsets.fromLTRB(20.0, 25.0, 20.0, 35.0),
               ),
-            ],),
+              Container(
+            margin:const EdgeInsets.all(15.0),
+            child: Text(
+                "This is a Fitness and Wellness App\n\n\nThe sessions of the user will be visible here",
+              style: TextStyle(
+                color: Colors.black87,
+                fontSize: 25,
+              ),
+            ),
+              ),
+            ],
           ),
+        ),
       )
     );
   }

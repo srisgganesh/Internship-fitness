@@ -38,7 +38,7 @@ class Tabs extends StatelessWidget {
               icon: Icon(Icons.insert_chart, size: 26.0),
             ),
             Tab(
-              icon: Icon(Icons.chat_bubble, size: 26.0),
+              icon: Icon(Icons.settings, size: 26.0),
             ),
           ],
           labelPadding: EdgeInsets.all(5.0),

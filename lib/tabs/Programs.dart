@@ -132,9 +132,9 @@ class Programs extends StatelessWidget {
                       ),
                       Section(
                         horizontalList: <Widget>[
-                          fitness_challenge(),
-                          fitness_challenge(),
-                          fitness_challenge(),
+                          FitnessChallenge(),
+                          FitnessChallenge(),
+                          FitnessChallenge(),
                         ],
                       ),
                     ],

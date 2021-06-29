@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class fitness_challenge extends StatelessWidget {
+class FitnessChallenge extends StatelessWidget {
 
   final Map<String, String> element = {
     'title': 'Challenge for the week',

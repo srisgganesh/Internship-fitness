@@ -1,5 +1,6 @@
 import 'package:fitness_flutter/components/Header.dart';
 import 'package:fitness_flutter/components/tab_view_base.dart';
+import 'package:fitness_flutter/pages/dietconsultation.dart';
 import 'package:flutter/material.dart';
 
 class Diet extends StatelessWidget {
@@ -16,23 +17,30 @@ class Diet extends StatelessWidget {
               backgroundColor: Colors.white,
               flexibleSpace: Header(
                 'Diet',
-                rightSide: Container(
-                  height: 35.0,
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  margin: EdgeInsets.only(right: 20.0),
-                  decoration: BoxDecoration(
-                    color: Color.fromRGBO(100, 140, 255, 1.0),
-                    borderRadius: BorderRadius.circular(20.0),
-                  ),
-                  child: Center(
-                    child: Text(
-                      'Tracker',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.w900,
+                rightSide: GestureDetector(
+                                  child: Container(
+                    height: 35.0,
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    margin: EdgeInsets.only(right: 20.0),
+                    decoration: BoxDecoration(
+                      color: Color.fromRGBO(100, 140, 255, 1.0),
+                      borderRadius: BorderRadius.circular(20.0),
+                    ),
+                    child: Center(
+                      child: Text(
+                        'Consult',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w900,
+                          fontSize: 20,
+                        ),
                       ),
                     ),
                   ),
+                  onTap: (){
+                     Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => DietConsultation()));
+                  },
                 ),
               ),
               bottom: TabBar(
@@ -58,7 +66,7 @@ class Diet extends StatelessWidget {
                   Container(
                     height: 30.0,
                     child: Tab(
-                      text: 'Tiffin',
+                      text: 'Snacks',
                     ),
                   ),
                 ],

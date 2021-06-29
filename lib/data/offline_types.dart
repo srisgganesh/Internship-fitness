@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-final List<Map<String, dynamic>> OfflineTypesList = [
+final List<Map<String, dynamic>> offlineTypesList = [
   {
     'leading': ['assets/images/s_c.jpg','hi' ],
     //'title': 'Strength And Conditioning',
